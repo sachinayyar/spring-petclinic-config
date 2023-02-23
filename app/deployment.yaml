@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/name: spring-petclinic
     app.kubernetes.io/part-of: spring-petclinic
     app.openshift.io/runtime: java
-  name: spring-petclinic
+  name: demo-developer
 spec:
   replicas: 1
   selector:
@@ -23,7 +23,7 @@ spec:
       containers:
       - name: spring-petclinic
         imagePullPolicy: Always
-        image: quay.io/sachinayyar/spring-petclinic:latest
+        image: quay.io/sachinayyar/spring-petclinic
         livenessProbe:
           failureThreshold: 3
           httpGet:
